@@ -1,0 +1,165 @@
+.country {
+  border: 1px ; /* Sky blue border */
+  margin: 10px;
+  padding: 10px; /* Consistent padding */
+  color: #000000;
+  border-radius: 15px; /* Rounded corners */
+  display: flex;
+  flex-direction: column;
+  gap: 1px; /* Space between elements */
+  
+  /* Solid background color for dark mode */
+  background-color: #ffffff; /* Dark background */
+  
+  /* Shadow effect */
+  box-shadow: 0 8px 30px rgba(49, 48, 48, 0.418); /* Deeper shadow for contrast */
+  
+  /* Transition for hover effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.country-info {
+  display: flex; 
+  align-items: center; 
+  
+  gap: 20px; 
+}
+
+.country-flag {
+  display: flex;
+  justify-content: center;
+  gap: 20px; 
+}
+.toggle-arrow {
+  font-size: 16px;
+  margin-top: 10px;
+  text-align: center;
+  color: #007bff;
+  transition: transform 0.2s ease;
+}
+
+.toggle-arrow:hover {
+  color: #0056b3;
+}
+
+.additional-info {
+  margin-top: 10px;
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+
+.flag {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.247); /* Deeper shadow for contrast */
+  width: 150px;
+  height: 100px;
+}
+.flag1 {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.247); /* Deeper shadow for contrast */
+  width: 70px;
+  height: 50px;
+}
+.country:hover {
+  transform: translateY(-4px); /* Slight lift on hover */
+  box-shadow: 0 12px 40px rgba(255, 136, 0, 0.822); /* Enhanced shadow on hover */
+}
+
+/* Optional: Add text color for better visibility */
+.country h2, .country p {
+  color: #000000; /* White text for contrast */
+}
+
+/* Additional styles for light mode */
+.country.light-mode {
+  background-color: #f7f7f7; /* Light gray background */
+  border-color: #007bff; /* Blue border for light mode */
+}
+
+.country.light-mode h2, .country.light-mode p {
+  color: #000000; /* Black text for light mode */
+}
+.countries-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Gap between countries */
+  justify-content: space-between; /* Ensure equal spacing */
+  margin: 10px;
+}
+
+.countries-container .country {
+  flex-basis: calc(30% - 20px); /* Set 3 columns with a gap and smaller size */
+  flex-grow: 1;
+  box-sizing: border-box;
+}
+.container {
+  display: flex;
+  justify-content: center;  /* Centers horizontally */
+  align-items: center;      /* Centers vertically */
+  height: 100vh;            /* Full height of the viewport */
+}
+.button-85 {
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: white;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 5px;
+  user-select: none;
+  touch-action: manipulation;
+  width: 150px; /* Set fixed width */
+  height: 45px;  /* Set fixed height */
+  font-size: 16px; /* Adjust font size to fit */
+  
+}
+
+.button-85:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5,
+    #002bff, #7a00ff, #ff00c8, #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button-85 {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
+.button-85:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+/* Hover effect */
+.button-85:hover {
+  background: #555; /* Change background on hover */
+  color: #00ffd5;   /* Change text color on hover */
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+.button-85:active {
+  transform: scale(0.98); /* Slight scale-down on click */
+}
