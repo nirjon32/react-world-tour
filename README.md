@@ -1,8 +1,10 @@
-# React + Vite
+# React World tour
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Load countries using useEffect
+Display countries in a simple way, Folder Structure
+Recap folder structure and turn off prop types eslint warning
+Toggle state based on click and conditional rendering
+Conditional CSS and conditional style
+(Advanced) Updating state in arrays and passing parameters
+(Recap) Lift up the state for visited flags
+(Optional) Prop drilling, pass props in multi-level
